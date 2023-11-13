@@ -77,37 +77,6 @@ void quickSort(vector<T>& v, int ini, int fin){
     }
 }
 
-template <typename T>
-
-void quickSort2(vector<T>& v, int ini, int fin){
-    int i, j;
-    double pivote;
-    pivote = v[ini];
-    i = ini;
-    j = fin;
-    do{
-        while(v[i] < pivote){
-            i++;
-        }
-        while(v[j] > pivote){
-            j--;
-        }
-        if(i <= j){
-            double temp = v[i];
-            v[i] = v[j];
-            v[j] = temp;
-            i++;
-            j--;
-        }
-    }while(i <= j);
-    if(ini < j){
-        quickSort(v, ini, j);
-    }
-    if(i < fin){
-        quickSort(v, i, fin);
-    }
-}
-
 template <typename T> 
 
 void print(vector<T>& v){
